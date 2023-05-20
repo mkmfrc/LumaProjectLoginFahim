@@ -1,0 +1,141 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-05-17T05:14:52.121Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1803944700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "luma.nyc.hooks.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "User Able To Login with correct credentials",
+        "description": "",
+        "id": "valid-users-able-to-login;user-able-to-login-with-correct-credentials",
+        "after": [
+          {
+            "result": {
+              "duration": 403108400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "luma.nyc.hooks.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6211365900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Navigate to url \u0027https://magento.softwaretestingboard.com/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027https://magento.softwaretestingboard.com/\u0027",
+                  "offset": 16
+                }
+              ],
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.navigate_to_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2285564000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User able to click on Sign In button",
+            "match": {
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.user_able_to_click_on_sign_in_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 113374400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Verify Customer Login text are available on the screen",
+            "match": {
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.verify_customer_login_text_are_available_on_the_screen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2285655300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Enter correct email address and password",
+            "match": {
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.enter_correct_email_address_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2842131900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Click \u0027login\u0027 button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027login\u0027",
+                  "offset": 6
+                }
+              ],
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.click_button(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3070288600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Verify that \u0027Welcome, \u003cFull Name\u003e\u0027 is visible",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Welcome, \u003cFull Name\u003e\u0027",
+                  "offset": 12
+                }
+              ],
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.verify_that_is_visible(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Functional"
+          }
+        ]
+      }
+    ],
+    "name": "Valid Users Able To Login",
+    "description": "",
+    "id": "valid-users-able-to-login",
+    "keyword": "Feature",
+    "uri": "file:Features/LumaLogin.feature",
+    "tags": []
+  }
+]
