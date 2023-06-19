@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Nopackage</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 17 01:14:51 EDT 2023</td>
+<td>Started on:</td><td>Sun Jun 18 22:51:29 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>19 seconds (19867 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3405 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,18 +67,23 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='luma.nyc.myrunner.LumaRunner.runScenario()'><b>runScenario</b><br>Test class: luma.nyc.myrunner.LumaRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Able To Login with correct credentials", "Optional[Valid Users Able To Login]"</td>
-<td></td>
-<td>19</td>
-<td>luma.nyc.myrunner.LumaRunner@76f2bbc1</td></tr>
+<td title='luma.nyc.myrunner.LumaRunner.runScenario()'><b>runScenario</b><br>Test class: luma.nyc.myrunner.LumaRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can login to the application with valid credentials and purchase the specific men's jacket.", "Optional[valid user can purchase the men jacket.]"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;luma.nyc.elementspage.LumaPageFactory.getLoginDone()&quot; because &quot;this.lpf&quot; is null
+	at luma.nyc.hooks.Hooks.setUp(Hooks.java:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace39661414", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace39661414'><pre>java.lang.NullPointerException: Cannot invoke &quot;luma.nyc.elementspage.LumaPageFactory.getLoginDone()&quot; because &quot;this.lpf&quot; is null
+	at luma.nyc.hooks.Hooks.setUp(Hooks.java:16)
+</pre></div></td>
+<td>2</td>
+<td>luma.nyc.myrunner.LumaRunner@6f27a732</td></tr>
 </table><p>
 </body>
 </html>

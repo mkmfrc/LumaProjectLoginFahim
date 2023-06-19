@@ -3,137 +3,163 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-05-17T05:14:52.121Z",
+        "start_timestamp": "2023-06-19T05:33:38.785Z",
         "before": [
           {
             "result": {
-              "duration": 1803944700,
+              "duration": 6165218600,
               "status": "passed"
             },
             "match": {
-              "location": "luma.nyc.hooks.Hooks.setUp()"
+              "location": "luma.nyc.hooks.LumaHooks.setUp()"
             }
           }
         ],
-        "line": 4,
-        "name": "User Able To Login with correct credentials",
+        "line": 23,
+        "name": "User can login to the application with valid credentials and purchase the specific men\u0027s jacket.",
         "description": "",
-        "id": "valid-users-able-to-login;user-able-to-login-with-correct-credentials",
-        "after": [
-          {
-            "result": {
-              "duration": 403108400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "luma.nyc.hooks.Hooks.tearDown()"
-            }
-          }
-        ],
+        "id": "valid-user-can-purchase-the-men-jacket.;user-can-login-to-the-application-with-valid-credentials-and-purchase-the-specific-men-s-jacket.;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 6211365900,
+              "duration": 1001600,
               "status": "passed"
             },
-            "line": 6,
-            "name": "Navigate to url \u0027https://magento.softwaretestingboard.com/\u0027",
+            "line": 8,
+            "name": "User already logged in the application and verify the user information on the landing page",
             "match": {
-              "arguments": [
-                {
-                  "val": "\u0027https://magento.softwaretestingboard.com/\u0027",
-                  "offset": 16
-                }
-              ],
-              "location": "luma.nyc.stepdefinitions.LumaStepDef.navigate_to_url(java.lang.String)"
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.user_already_logged_in_the_application_and_verify_the_user_information_on_the_landing_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2285564000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "User able to click on Sign In button",
-            "match": {
-              "location": "luma.nyc.stepdefinitions.LumaStepDef.user_able_to_click_on_sign_in_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 113374400,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "Verify Customer Login text are available on the screen",
-            "match": {
-              "location": "luma.nyc.stepdefinitions.LumaStepDef.verify_customer_login_text_are_available_on_the_screen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2285655300,
               "status": "passed"
             },
             "line": 9,
-            "name": "Enter correct email address and password",
+            "name": "User should be able to select jacket from men module",
             "match": {
-              "location": "luma.nyc.stepdefinitions.LumaStepDef.enter_correct_email_address_and_password()"
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.user_should_be_able_to_select_jacket_from_men_module()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2842131900,
+              "duration": 997400,
               "status": "passed"
             },
             "line": 10,
-            "name": "Click \u0027login\u0027 button",
+            "name": "Verify the jacket name on the \"Jupiter All-Weather Trainer\" list",
             "match": {
               "arguments": [
                 {
-                  "val": "\u0027login\u0027",
-                  "offset": 6
+                  "val": "\"Jupiter All-Weather Trainer\"",
+                  "offset": 30
                 }
               ],
-              "location": "luma.nyc.stepdefinitions.LumaStepDef.click_button(java.lang.String)"
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.verify_the_jacket_name_on_the_list(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3070288600,
               "status": "passed"
             },
             "line": 11,
-            "name": "Verify that \u0027Welcome, \u003cFull Name\u003e\u0027 is visible",
+            "name": "User should be able to select the \"S\" and \"Blue\" and \"1\" then click on the add to cart",
             "match": {
               "arguments": [
                 {
-                  "val": "\u0027Welcome, \u003cFull Name\u003e\u0027",
-                  "offset": 12
+                  "val": "\"S\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Blue\"",
+                  "offset": 42
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 53
                 }
               ],
-              "location": "luma.nyc.stepdefinitions.LumaStepDef.verify_that_is_visible(java.lang.String)"
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.user_should_be_able_to_select_the_and_and_then_click_on_the_add_to_cart(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User should be able to click on the cart",
+            "match": {
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.user_should_be_able_to_click_on_the_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User should be able to click on the checkout",
+            "match": {
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.user_should_be_able_to_click_on_the_checkout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User should be able to enter the shipping details and click on the Next",
+            "match": {
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.user_should_be_able_to_enter_the_shipping_details_and_click_on_the_next()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User should be able to verify the shipping address and place the order",
+            "match": {
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.user_should_be_able_to_verify_the_shipping_address_and_place_the_order()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User should be able to verify the order number and get text on the screen \"Thank you for your purchase!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Thank you for your purchase!\"",
+                  "offset": 74
+                }
+              ],
+              "location": "luma.nyc.stepdefinitions.LumaStepDef.user_should_be_able_to_verify_the_order_number_and_get_text_on_the_screen(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Functional"
+            "name": "@smoke"
           }
         ]
       }
     ],
-    "name": "Valid Users Able To Login",
-    "description": "",
-    "id": "valid-users-able-to-login",
+    "name": "valid user can purchase the men jacket.",
+    "description": "Description:  \"Online user can register luma e-commerce web-site to purchase, return, deliver, exchange, clearance, sale, etc.\"  ",
+    "id": "valid-user-can-purchase-the-men-jacket.",
     "keyword": "Feature",
     "uri": "file:Features/LumaLogin.feature",
     "tags": []

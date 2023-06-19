@@ -32,7 +32,7 @@ public class SuperClass {
 		}
 	}
 
-	public void getOpenBrowser() {
+	public void initialization() {
 		
 		browser = prop.getProperty("browserName");
 		if (browser.equalsIgnoreCase("Chrome")) {
@@ -48,5 +48,6 @@ public class SuperClass {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		driver.get(prop.getProperty("QA_ENV"));
 	}
 	}

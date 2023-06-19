@@ -6,58 +6,51 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import luma.nyc.basepage.SuperClass;
+import luma.nyc.generic.CommonUtil;
 
 public class LumaPageFactory extends SuperClass {
 
+	
 	public LumaPageFactory() {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//*[@class= 'authorization-link']//descendant::a")
+	@FindBy(partialLinkText = "Sign In")
 	@CacheLookup
-	private WebElement ClickSigninButtion;
+	private WebElement clickSigninAtHomePage;
 
-	public WebElement getClickSigninButtion() {
-		return ClickSigninButtion;
-	}
-
-	@FindBy(xpath = "(//*[text()= 'Customer Login'])[2]")
-	@CacheLookup
-	private WebElement CustLoginText;
-
-	public WebElement getCustLoginText() {
-		return CustLoginText;
+	public WebElement getClickHomePageSignin() {
+		return clickSigninAtHomePage;
 	}
 
 	@FindBy(xpath = "//*[@id= 'email']")
 	@CacheLookup
-	private WebElement enterUserID;
+	private WebElement enterEmail;
 
-	public WebElement getEnterUserID() {
-		return enterUserID;
+	public WebElement getEnterEmail() {
+		return enterEmail;
 	}
 
 	@FindBy(xpath = "//*[@id= 'pass']")
 	@CacheLookup
-	private WebElement enterPass;
+	private WebElement enterPassword;
 
-	public WebElement getEnterPass() {
-		return enterPass;
+	public WebElement getEnterPassword() {
+		return enterPassword;
 	}
 
-	@FindBy(xpath = "//*[@id= 'send2']")
+	@FindBy(id = "send2")
 	@CacheLookup
-	private WebElement clickSignIn;
+	private WebElement clickFinalSignin;
 
-	public WebElement getClickSignIn() {
-		return clickSignIn;
+	public WebElement getClickSignin() {
+		return clickFinalSignin;
 	}
-
-	@FindBy(xpath = "//*[text()='Welcome, Selenium ProjectUser!']")
-	@CacheLookup
-	private WebElement welcomeText;
-
-	public WebElement getwelcomeText() {
-		return welcomeText;
+	
+	public void getLogin() {
+		CommonUtil.actionClick(clickSigninAtHomePage);
+		enterEmail.sendKeys(prop.getProperty("UserName"));
+		enterPassword.sendKeys("Password");
+		CommonUtil.actionClick(clickFinalSignin);
 	}
 }
