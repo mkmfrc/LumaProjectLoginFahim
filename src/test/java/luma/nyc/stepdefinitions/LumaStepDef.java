@@ -8,7 +8,6 @@ import org.testng.Assert;
 
 public class LumaStepDef extends SuperClass {
 
-	LumaPageFactory pf;
 
 	@Given("User already logged in the application and verify the user information on the landing page")
 	public void user_already_logged_in_the_application_and_verify_the_user_information_on_the_landing_page() {
